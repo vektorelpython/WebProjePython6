@@ -1,0 +1,14 @@
+{% extends 'EdizContact/base.html' %}
+{% block sayfa_isim %} Blog {% endblock %}
+{% block content %}
+<a class="btn btn-default" href="{% url 'gonderi_duzenle' pk=gonderi.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <div>
+            {% if gonderi.yayim_zaman %}
+                <p>{{ gonderi.yayim_zaman }} </p>
+            {% endif %} 
+            <h2>
+                <a href="">{{ gonderi.baslik }}</a>
+            </h2>
+            <p>{{ gonderi.yazi }} </p>
+        </div>
+{% endblock %}
